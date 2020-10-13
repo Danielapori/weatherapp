@@ -1,22 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-function Login () {
+function Login ({ setUserSignIn}) {
+
+    const [username, setUsername] = useState ('');
+    const [password, setPassword] = useState ('');
+    
+    function handleUsername (event) {
+        setUsername (event.target.value)
+    }
+
+    function handlePassword (event) {
+        setPassword (event.target.value)
+    }
+
+    function handleSignIn (event) {
+        event.preventDefault();
+
+    if (username === 'Daniel Apori' && password === '12345' ) {
+        setUserSignIn(true)
+    
+    }
+
+}
+
+
     return (
-        <div className="card">
-            <div className="card-body login-page">
+        <div>
+           <div className="card-body login-page">
                 <h3>Login </h3>
             <form>
                 <div className="form-group">
-                    <label for="exampleInputEmail1">Username</label>
-                    <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                    <label for="exampleInputusername1">Username</label>
+                    <input type="text" className="form-control" id="exampleInputusername1" aria-describedby="usernameHelp" 
+                    value={username} onChange= {handleUsername} />
                 </div>
 
                 <div className="form-group">
                     <label for="exampleInputPassword1">Password</label>
-                    <input type="password" className="form-control" id="exampleInputPassword1" />
+                    <input type="password" className="form-control" id="exampleInputPassword1" 
+                    value={password} onChange={handlePassword} />
             
                 </div>
-                <button type="submit" className="btn btn-secondary btn-block">Sign In</button>
+                <button onClick={handleSignIn} className="btn btn-secondary btn-block">Sign In</button>
             
                 <p className="mt-3">
                     Don't have an account? <a href="https://google.com">

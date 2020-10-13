@@ -2,6 +2,32 @@
   background-image: url(grey.jpg);
   width: 350px;
   margin: 0 auto;
+  margin-top: 0 auto;
+}
+
+.signup-page {
+  background-image: url(new.jpeg);
+  width: 350px;
+  margin: 0 auto;
   margin-top: 120px ;
 }
 
+.background {
+  background-image: url(good.jpg);
+}
+
+.main {
+  text-align: center;
+  color: white;
+  font-family:  Arial;
+  font-size: large;
+}
+
+.App {
+  background-color: rgb(155, 155, 155);
+  background-position: cover;
+}
+
+.state {
+  font-size: 20px;
+}
